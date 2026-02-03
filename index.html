@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meine Rechner App</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #74ebd5, #9face6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .card {
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        width: 320px;
+        text-align: center;
+    }
+
+    h2 {
+        margin-top: 0;
+    }
+
+    p {
+        font-size: 14px;
+        color: #555;
+    }
+
+    input {
+        width: 90%;
+        padding: 10px;
+        margin: 8px 0;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        background: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    button:hover {
+        background: #45a049;
+    }
+
+    .output {
+        margin-top: 8px;
+        text-align: left;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+<div class="card">
+
+<h2>Bäckerbestellung Mengenrechner</h2>
+<p>In der Formel ist bereits ein Überschuss von 15% enthalten - soll ja a Bisserl was überbleiben.</p>
+
+<input type="number" id="zahl1" placeholder="Erwachsene">
+<input type="number" id="zahl2" placeholder="Kinder">
+<br>
+<button onclick="berechnen()">Berechnen</button>
+
+<div class="output">Semmeln: <span id="erg1"></span></div>
+<div class="output">Körndlsemmeln: <span id="erg2"></span></div>
+<div class="output">Laugen: <span id="erg3"></span></div>
+<div class="output">Brezn: <span id="erg4"></span></div>
+<div class="output">Croissant: <span id="erg5"></span></div>
+<div class="output">Brot: <span id="erg6"></span></div>
+
+</div>
+
+
+<script>
+function berechnen() {
+    let a = parseFloat(document.getElementById("zahl1").value);
+    let b = parseFloat(document.getElementById("zahl2").value);
+
+    if (isNaN(a) || isNaN(b)) {
+        alert("Bitte Zahlen eingeben!");
+        return;
+    }
+
+    // ?? HIER KOMMT DEINE FORMEL REIN
+    let Semmeln = (a + (b / 2)) * 0.23 * 1.17;
+document.getElementById("erg1").innerText = Math.round(Semmeln);
+    let Körndlsemmeln = (a + (b / 2)) * 0.5 * 1.17;
+document.getElementById("erg2").innerText = Math.round(Körndlsemmeln);
+   let Laugen = (a + (b / 2)) * 0.68 * 1.17
+document.getElementById("erg3").innerText = Math.round(Laugen);
+    let Brezn = (a + (b / 2)) * 0.47 * 1.17;
+document.getElementById("erg4").innerText = Math.round(Brezn);
+    let Croissant = (a + (b / 2)) * 0.25 * 1.17;
+document.getElementById("erg5").innerText = Math.round(Croissant);
+    let Brot = 1;
+document.getElementById("erg6").innerText = Math.round(Brot);
+
+}
+</script>
+
+</body>
+</html>
