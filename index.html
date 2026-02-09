@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bäckerbestellung Mengenrechner</title>
+    <title>BÃ¤ckerbestellung Mengenrechner</title>
 
 <style>
     body {
@@ -69,8 +69,8 @@
 <body>
 <div class="card">
 
-<h2>Bäckerbestellung Mengenrechner</h2>
-<p>In der Formel ist bereits ein Überschuss von 15% enthalten - soll ja a Bisserl was überbleiben.</p>
+<h2>BÃ¤ckerbestellung Mengenrechner</h2>
+<p>In der Formel ist bereits ein Ãœberschuss von 15% enthalten - soll ja a Bisserl was Ã¼berbleiben.</p>
 
 <input type="number" id="zahl1" placeholder="Erwachsene">
 <input type="number" id="zahl2" placeholder="Kinder">
@@ -78,7 +78,7 @@
 <button onclick="berechnen()">Berechnen</button>
 
 <div class="output">Semmeln: <span id="erg1"></span></div>
-<div class="output">Körndlsemmeln: <span id="erg2"></span></div>
+<div class="output">KÃ¶rndlsemmeln: <span id="erg2"></span></div>
 <div class="output">Laugen: <span id="erg3"></span></div>
 <div class="output">Brezn: <span id="erg4"></span></div>
 <div class="output">Croissant: <span id="erg5"></span></div>
@@ -97,7 +97,7 @@ function berechnen() {
         return;
     }
 
-    // ?? HIER KOMMT DEINE FORMEL REIN
+    // ðŸ‘‰ HIER KOMMT DEINE FORMEL REIN
     let Semmeln = (a + (b / 2)) * 0.23 * 1.17;
 document.getElementById("erg1").innerText = Math.round(Semmeln);
     let Koerndlsemmeln = (a + (b / 2)) * 0.5 * 1.17;
